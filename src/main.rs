@@ -1,9 +1,8 @@
 #![feature(plugin)]
-#![plugin(rocket_codegen)]
+// #![plugin(rocket_codegen)]
+#![feature(proc_macro_hygiene, decl_macro)]
 
-
-extern crate rocket;
-
+#[macro_use] extern crate rocket;
 use std::io;
 use std::path::{Path, PathBuf};
 
